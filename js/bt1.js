@@ -1,12 +1,14 @@
 const sortNum = () => {
-  const numArr = document
-    .getElementById("bt1__duLieu")
-    .value.split(",")
-    .map(Number);
+  const originalInput = document.getElementById("bt1__duLieu").value;
 
-  // console.log(numArr);
+  if (originalInput != "") {
+    const numArr = originalInput.split(",").map(Number);
+    // console.log(numArr);
 
-  const sortedArr = numArr.sort((a, b) => a - b);
+    const sortedArr = numArr.sort((a, b) => a - b);
 
-  document.getElementById("bt1__ketQua").innerHTML = sortedArr.join(", ");
+    document.getElementById("bt1__ketQua").innerHTML = sortedArr.join(", ");
+  } else {
+    document.getElementById("bt1__ketQua").innerHTML = "";
+  }
 };
