@@ -1,9 +1,9 @@
 document.addEventListener("click", (e) => {
   const element = e.target;
 
-  if (element.tagName == "BUTTON") {
+  if (element.tagName == "BUTTON" && element.parentNode.id == "chooseMember") {
     const member = element.value;
-    console.log(member);
+    // console.log(member);
 
     switch (member) {
       case "B":
